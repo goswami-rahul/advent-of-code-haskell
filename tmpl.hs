@@ -1,17 +1,19 @@
 module Main where
-small = undefined
-large = undefined
+
+easy = undefined
+
+hard = easy
 
 solve :: String -> String
 solve = undefined
 
---------- all IO below
+---------------------- IO -------------------------- 
 
 inFile :: String
-inFile = "INPUT_FILE_NAME"
+inFile = undefined
 
 outFile :: String
-outFile = "OUTPUT_FILE_NAME"
+outFile = undefined
 
 main :: IO ()
 main = readFile inFile >>= writeFile outFile . solve
