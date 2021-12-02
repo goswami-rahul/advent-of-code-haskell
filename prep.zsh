@@ -8,7 +8,7 @@ day=${1:?Need day number}
 level="${2:?Need level [1|2]}"
 
 printf -v srcfile "day%02d.hs" $day
-printf -v infile "inputs/day%02d_%d.txt" $day $level
+printf -v infile "inputs/day%02d.txt" $day
 printf -v outfile "outputs/day%02d_%d.txt" $day $level
 printf -v url "https://adventofcode.com/$YEAR/day/%01d/input" $day
 
