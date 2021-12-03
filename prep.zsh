@@ -20,9 +20,8 @@ curl -o $infile $url -sSH "cookie: ${COOKIE}"
 
 if [[ -s $srcfile ]]; then 
   cp $srcfile "./.backup/${srcfile}.bak.hs"
-  # in place update filenames
-  sed -e "\|^inFile =|c inFile = \"${infile}\"" -e "\|^outFile =|c outFile = \"${outfile}\"" -i "$srcfile"
 else
-  # copy from template
-  sed -e "\|^inFile =|c inFile = \"${infile}\"" -e "\|^outFile =|c outFile = \"${outfile}\"" "$HS_TMPL" > "$srcfile"
+  cp $HS_TMPL $srcfile
 fi
+
+sed -e "\|^inFile =|c inFile = \"${infile}\"" -e "\|^outFile =|c outFile = \"${outfile}\"" -i "$srcfile"
